@@ -1,24 +1,23 @@
 $(document).ready(function() {
-
     // Transition effect for navbar and back-to-top icon
     $(window).scroll(function() {
-      // checks if window is scrolled more than 500px, adds/removes solid class
-      if($(this).scrollTop() > 550) { 
-          $('.navbar').addClass('solid');
-          $('.back-to-top').addClass('visible'); 
-      } else {
-          $('.navbar').removeClass('solid');
-          $('.back-to-top').removeClass('visible');  
-      }
-
+        // checks if window is scrolled more than 550px, adds/removes solid class
+        if($(this).scrollTop() > 550) { 
+            $('.navbar').addClass('solid');
+            $('.back-to-top').addClass('visible'); 
+        } else {
+            $('.navbar').removeClass('solid');
+            $('.back-to-top').removeClass('visible');  
+        }
     });
-
 
     // Scrolling effect for Arrow icons
     $("#scrollIcon").click(function(e) {
         e.preventDefault();
         $.scrollTo($("#about"), 1000);
     });
+
+    // Scrolling effect for Navbar links
     $("#nav-about").click(function(e) {
         e.preventDefault();
         $.scrollTo($("#about"), 1000);
@@ -35,5 +34,4 @@ $(document).ready(function() {
         e.preventDefault();
         $.scrollTo(0, 1000);
     });
-      
-  });
+});
